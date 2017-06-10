@@ -215,3 +215,8 @@ textarea {
 .post-description, .post-comments, label, .tag-title, .profile-stats, .proposal-description, .proposal-author, .comment-content {
     color: #9fa6ad;
 }
+
+.modal {
+    background-color: #242729;
+    color: #99d4ff;
+}
