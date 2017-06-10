@@ -19,7 +19,7 @@
 }
 
 .comment-author {
-	color: #0097a7;
+	color: #4390df;
 }
 
 .comment {
@@ -35,6 +35,12 @@
     margin-bottom: 4vw;
     width: 100%;
 }
+
 .comment-details {
 	padding-left: 5em;
+	padding-bottom: 0.15em;
+}
+
+.clearfix {
+	padding-bottom: .5em;
 }
