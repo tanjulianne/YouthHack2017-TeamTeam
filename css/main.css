@@ -1,4 +1,3 @@
-
 .navbar {
     border-bottom-width: 1px;
     border-bottom-color: #AAA;
@@ -48,7 +47,7 @@
 
 .post-vote-section {
     float: left;
-    font-size: 2vw;
+    font-size: 1vw;
     text-align: center;
 }
 
