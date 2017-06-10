@@ -80,6 +80,11 @@
     font-size: 1.5em;
 }
 
+.post-settings {
+    font-size: 2em;
+    margin-bottom: 1vh; 
+}   
+
 .post-description {
     display: block;
     margin-top: 1em;
@@ -166,6 +171,6 @@
 #write-proposal {
     font-size: 1.5em;
     padding: 1em;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
+    padding-left: 2em;
+    padding-right: 2em;
 }
