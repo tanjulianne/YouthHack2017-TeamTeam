@@ -87,8 +87,8 @@
 }
 
 .post-content {
-    margin-bottom: 3vw;
     margin-left: 5vw;
+    margin-bottom: 4vw;
     width: 100%;
 }
 
@@ -119,6 +119,26 @@
     display: flex;
     width: 10%;
     margin: 0px;
+}
+
+.post-comments {
+    display: inline;
+    margin-top: 2vh;
+    margin-right: 25vw;
+    font-size: 12px;
+}
+
+.post-controls {
+    float: left;
+}
+
+.post-comments > button{
+    margin-left: 2vw;
+    font-size: 10px;
+}
+
+.post-controls > button {
+    margin-right: 2vw;
 }
 
 .mouse-pointer:hover {
