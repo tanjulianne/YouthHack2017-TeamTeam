@@ -23,17 +23,18 @@ input[name="tags"] {
 }
 
 .submit-proposal {
-	background-color: #0079a7;
-	color: white;
+	background-color: #99d4ff;
+	color: #111;
 	padding: 5px 24px;
 	margin-top: 1em;
 	margin-bottom: 1em;
 	border: none;
+	border-radius: 4px;
 }
 
 .guidelines-container {
 	float: right;
-	background-color: rgba(0,0,0,0.16);
+	background-color: rgba(153,212,255,0.8);
 	width: 30%;
 	height: 300px;
 	margin-right: 2.5em;
@@ -42,10 +43,16 @@ input[name="tags"] {
 .guidelines-title {
 	padding: 0.90em;
 	font-size: 2.25vw;
+	color: #111;
 }
 
 .guidelines {
 	padding-left: 7%;
 	padding-right: 7%;
 	text-align: justify;	
+	color: #111;
+}
+
+h1, label {
+	color: #9fa6ad;
 }
