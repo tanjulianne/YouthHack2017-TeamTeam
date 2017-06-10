@@ -37,7 +37,7 @@ input[name="tags"] {
 	background-color: rgba(153,212,255,0.8);
 	width: 30%;
 	height: 300px;
-	margin-right: 2.5em;
+	margin-right: 10vw;
 }
 
 .guidelines-title {
