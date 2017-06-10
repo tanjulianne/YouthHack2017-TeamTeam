@@ -1,6 +1,43 @@
 
+.navbar {
+    border-bottom-width: 1px;
+    border-bottom-color: #AAA;
+    border-bottom-style: solid;
+    min-height: 0px;
+}
+
+.navbar-brand {
+    float: left;
+}
+
+.navbar-content {
+    padding: 15px;
+    height: 50px;
+    float: right;
+}
+
+.navbar-content > a{
+    text-align: center;
+    margin-right: 2vw;
+}
+
 .nav-item {
     padding: 2em;
+}
+
+.search {
+    display: flex;
+    width: 100%;
+}
+
+.search > label {
+    margin: auto;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.search > input{
+    width: 60%;
 }
 
 .post {
