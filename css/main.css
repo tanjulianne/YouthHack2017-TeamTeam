@@ -125,7 +125,7 @@
 .post-comments {
     display: inline;
     margin-top: 2vh;
-    margin-right: 25vw;
+    margin-right: 15vw;
     font-size: 12px;
 }
 
@@ -161,4 +161,11 @@
 
 .profile-stats {
     font-size: 1em;
+}
+
+#write-proposal {
+    font-size: 1.5em;
+    padding: 1em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
 }
