@@ -40,10 +40,18 @@ var testData = [
 
 var app = angular.module('app', []);
 
-app.controller('ctrl', function ($scope) {
-    $scope.search = 0;
-    
+app.controller('ctrl', function ($scope, $http) {
     $scope.searchProposals = function () {
-        $scope.res = testData
+        $scope.res = testData;
+
+        $http({
+            method: 'POST',
+            url: '/search',
+            data: {"search":$scope.search}
+        }).then(function successCallback(response) {
+            console.log(response.data);
+        }, function errorCallback(response) {
+            console.log(response.data);
+        });
     }
 });

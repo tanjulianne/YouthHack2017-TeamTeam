@@ -9,8 +9,8 @@
         <title>TEAM TEAM YOUTH HACK</title>
 
         <!-- Bootstrap core CSS -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/main.css" rel="stylesheet">
+        <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../static/css/main.css" rel="stylesheet">
 
         <style>
             body {
@@ -53,7 +53,8 @@
                         <div class="form-group search">
                             <button type="button" class="btn btn-default">Tags</button>
                             <label for="searchProposal">Search</label>
-                            <input id="searchProposal" class="form-control" type="text" ng-model="search" ng-change="searchProposals()" />
+                            <input id="searchProposal" class="form-control" type="text" ng-model="search"  />
+                            <button type="button" class="btn btn-default" ng-click="searchProposals()">Search</button>
                         </div>
                     </div>
 
@@ -140,9 +141,9 @@
         </footer>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-        <script src="js/jquery-3.2.1.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
+        <script src="../static/js/jquery-3.2.1.min.js"></script>
+        <script src="../static/js/bootstrap.min.js"></script>
+        <script src="../static/js/main.js"></script>
         
     </body>
 </html>
