@@ -51,11 +51,11 @@
     text-align: center;
 }
 
-.post-vote-section .vote-up {
+.post-vote-section #vote-up {
     color: #5C5;
 }
 
-.post-vote-section .vote-down {
+.post-vote-section #vote-down {
     color: #C55;
 }
 
@@ -119,4 +119,14 @@
     display: flex;
     width: 10%;
     margin: 0px;
+}
+
+.mouse-pointer:hover {
+    cursor:pointer;
+}
+
+
+.mouse-pointer:active {
+    transform: scale(.90);
+    cursor:pointer;
 }
