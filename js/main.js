@@ -26,12 +26,23 @@ var testData = [
         "upvote": 53,
         "downvote": 103,
         "comments": 531
+    },{ 
+        "postTitle": "Modernization of LRT1 stations",
+        "postDescription": "LRT1 station frequently suffers from malfunctioning equipment and poor ventilation.",
+        "tags": ["DOTC", "Transportation", "LRT"],
+        "posted": "2013-04-06",
+        "updated": "2014-04-09",
+        "upvote": 523,
+        "downvote": 23,
+        "comments": 21
     }
 ];
 
 var app = angular.module('app', []);
+
 app.controller('ctrl', function ($scope) {
     $scope.search = 0;
+    
     $scope.searchProposals = function () {
         $scope.res = testData
     }
