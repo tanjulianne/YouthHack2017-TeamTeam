@@ -41,153 +41,136 @@
         </header>
 
         <!-- Main Content -->
-        <div class="container">
-            <div class="row">
-                <div class="form-group search">
-                    <label for="searchProposal">Search</label>
-                    <input id="searchProposal" type="text" class="form-control"/>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+                <div class="row">
+                    <div class="form-group search">
+                        <label for="searchProposal">Search</label>
+                        <input id="searchProposal" type="text" class="form-control"/>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- test for moderator -->
+                    <div class="post">
+                        <hr>
+                        <div class="post-details">
+                            <div class="date">
+                                Posted:
+                                <div id="date-posted">2012, August</div>
+                                Last Updated:
+                                <div id="date-updated">2016, July</div>
+                            </div>
+                        </div>
+                        <div class="post-vote-section">
+                            <div id="vote-up" class="mouse-pointer">
+                                <span>▲</span>
+                                <div class="post-upvote-count">0</div>
+                            </div>
+                            <hr>
+                            <div id="vote-down" class="mouse-pointer">
+                                <div class="post-downvote-count">0</div>
+                                <span class="vote-down">▼</span>
+                            </div>
+                        </div>
+                        <div class="post-image">
+                            <img src="img/sample-bridge.png">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-title">
+                            Cavite-Bataan Express Bridge [MODERATOR TEST]
+                            </div>
+                            <div class="post-description">
+                            Construct an express bridge from Cavite to Bataan to avoid Metro Manila traffic
+                            </div>
+                            <div class="post-tags">
+                                <div class="tag-title">Tags:</div>
+                                <div class="tag">DPWH</div>
+                                <div class="tag">Bridge</div>
+                                <div class="tag">Infrastructure</div>
+                            </div>
+                            <div class="post-controls">
+                                <div class="post-comments">
+                                    Comments: <span class="count">0</span> 
+                                </div>
+                                <button type="button" class="btn btn-success">Approve Proposal</button>
+                                <button type="button" class="btn btn-danger">Disapprove Proposal</button>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <!-- test for official -->
+                    <div class="post">
+                        <hr>
+                        <div class="post-details">
+                            <div class="date">
+                                Posted:
+                                <div id="date-posted">2012, August</div>
+                                Last Updated:
+                                <div id="date-updated">2016, July</div>
+                            </div>
+                        </div>
+                        <div class="post-vote-section">
+                            <div id="vote-up" class="mouse-pointer">
+                                <span>▲</span>
+                                <div class="post-upvote-count">0</div>
+                            </div>
+                            <hr>
+                            <div id="vote-down" class="mouse-pointer">
+                                <div class="post-downvote-count">0</div>
+                                <span class="vote-down">▼</span>
+                            </div>
+                        </div>
+                        <div class="post-image">
+                            <img src="img/sample-bridge.png">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-title">
+                            Cavite-Bataan Express Bridge [OFFICIAL TEST]
+                            </div>
+                            <div class="post-description">
+                            Construct an express bridge from Cavite to Bataan to avoid Metro Manila traffic
+                            </div>
+                            <div class="post-tags">
+                                <div class="tag-title">Tags:</div>
+                                <div class="tag">DPWH</div>
+                                <div class="tag">Bridge</div>
+                                <div class="tag">Infrastructure</div>
+                            </div>
+                            <div class="post-controls">
+                                <div class="post-comments">
+                                    Comments: <span class="count">0</span>
+                                </div>
+                                <button type="button" class="btn btn-success">Accept Proposal</button>
+                                <button type="button" class="btn btn-danger">Decline Proposal</button>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <!-- Pager -->
+                    <div class="clearfix">
+                        <a class="btn btn-secondary float-right" href="#">Older Posts &rarr;</a>
+                    </div>
                 </div>
             </div>
-            
-            <div class="row">
-                <!-- test for moderator -->
-                <div class="post">
-                    <hr>
-                    <div class="post-details">
-                        <div class="date">
-                            Posted:
-                            <div id="date-posted">2012, August</div>
-                            Last Updated:
-                            <div id="date-updated">2016, July</div>
-                        </div>
-                    </div>
-                    <div class="post-vote-section">
-                        <div id="vote-up" class="mouse-pointer">
-                            <span>▲</span>
-                            <div class="post-upvote-count">0</div>
-                        </div>
-                        <hr>
-                        <div id="vote-down" class="mouse-pointer">
-                            <div class="post-downvote-count">0</div>
-                            <span class="vote-down">▼</span>
-                        </div>
-                    </div>
-                    <div class="post-image">
-                        <img src="img/sample-bridge.png">
-                    </div>
-                    <div class="post-content">
-                        <div class="post-title">
-                        Cavite-Bataan Express Bridge [MODERATOR TEST]
-                        </div>
-                        <div class="post-description">
-                        Construct an express bridge from Cavite to Bataan to avoid Metro Manila traffic
-                        </div>
-                        <div class="post-tags">
-                            <div class="tag-title">Tags:</div>
-                            <div class="tag">DPWH</div>
-                            <div class="tag">Bridge</div>
-                            <div class="tag">Infrastructure</div>
-                        </div>
-                        <div class="post-controls">
-                            <div class="post-comments">
-                                Comments: <span class="count">0</span> 
-                            </div>
-                            <button type="button" class="btn btn-success">Approve Proposal</button>
-                            <button type="button" class="btn btn-danger">Disapprove Proposal</button>
-                        </div>
-                    </div>
-                    <hr>
-                </div>
-                <!-- test for official -->
-                <div class="post">
-                    <hr>
-                    <div class="post-details">
-                        <div class="date">
-                            Posted:
-                            <div id="date-posted">2012, August</div>
-                            Last Updated:
-                            <div id="date-updated">2016, July</div>
-                        </div>
-                    </div>
-                    <div class="post-vote-section">
-                        <div id="vote-up" class="mouse-pointer">
-                            <span>▲</span>
-                            <div class="post-upvote-count">0</div>
-                        </div>
-                        <hr>
-                        <div id="vote-down" class="mouse-pointer">
-                            <div class="post-downvote-count">0</div>
-                            <span class="vote-down">▼</span>
-                        </div>
-                    </div>
-                    <div class="post-image">
-                        <img src="img/sample-bridge.png">
-                    </div>
-                    <div class="post-content">
-                        <div class="post-title">
-                        Cavite-Bataan Express Bridge [OFFICIAL TEST]
-                        </div>
-                        <div class="post-description">
-                        Construct an express bridge from Cavite to Bataan to avoid Metro Manila traffic
-                        </div>
-                        <div class="post-tags">
-                            <div class="tag-title">Tags:</div>
-                            <div class="tag">DPWH</div>
-                            <div class="tag">Bridge</div>
-                            <div class="tag">Infrastructure</div>
-                        </div>
-                        <div class="post-controls">
-                            <div class="post-comments">
-                                Comments: <span class="count">0</span>
-                            </div>
-                            <button type="button" class="btn btn-success">Accept Proposal</button>
-                            <button type="button" class="btn btn-danger">Decline Proposal</button>
-                        </div>
-                    </div>
-                    <hr>
-                </div>
-                <!-- Pager -->
-                <div class="clearfix">
-                    <a class="btn btn-secondary float-right" href="#">Older Posts &rarr;</a>
-                </div>
+        <div class="profile col-lg-2">
+            <button type="button" class="btn btn-success">Write Proposal</button>
+            <div class="profile-name">
+                <h1>Blaise Cruz</h1>
+            </div>
+            <div class="profile-stats">
+                <span class="approved-proposal">0</span> Approved Proposals
+                <br>
+                <span class="needs-editing">0</span> Needs Editing
             </div>
         </div>
-
-        <hr>
+        
 
         <!-- Footer -->
         <footer>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
-                        <!--
-                        <ul class="list-inline text-center">
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                        -->
                         <p class="copyright text-muted">Copyright &copy; Your Website 2017</p>
                     </div>
                 </div>

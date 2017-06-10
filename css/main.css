@@ -43,6 +43,7 @@
     display: block;
     width: 100%;
     margin-top: 2vw;
+    padding-right: 2vw;
 }
 
 .post-vote-section {
@@ -145,8 +146,19 @@
     cursor:pointer;
 }
 
-
 .mouse-pointer:active {
     transform: scale(.90);
     cursor:pointer;
+}
+
+.profile {
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: #AAA;
+    padding-bottom: 25%;
+    float: right;
+}
+
+.profile-stats {
+    font-size: 1em;
 }
