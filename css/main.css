@@ -1,0 +1,86 @@
+
+.nav-item {
+    padding: 2em;
+}
+
+.post {
+    display: block;
+    width: 100%;
+    margin-top: 2vw;
+}
+
+.post-vote-section {
+    float: left;
+    font-size: 2vw;
+    text-align: center;
+}
+
+.post-vote-section .vote-up {
+    color: #5C5;
+}
+
+.post-vote-section .vote-down {
+    color: #C55;
+}
+
+
+.post-image {
+    float: left;
+    margin-right: 1vw;
+    margin-left: 2vw;
+    width: 150px;
+    height: 150px;
+}
+
+.post-image .img {
+    width: 100%;
+    height: 100%;
+}
+
+.post-title {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+}
+
+.post-description {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 1em;
+}
+
+.post-content {
+    margin-bottom: 3vw;
+    margin-left: 5vw;
+    width: 100%;
+}
+
+.post-details {
+    font-size: 11px;
+    float: right;
+}
+
+.post-details .date #date-posted {
+    margin-bottom: 1vw;
+}
+
+.post-tags {    
+   display: flex;
+}
+
+.post-tags .tag-title {
+    display: block;
+    margin: 0.5em;
+}
+
+.post-tags .tag {
+    display: block;
+    margin: 0.5em;  
+}
+
+.post-tags-titles {
+    display: flex;
+    width: 10%;
+    margin: 0px;
+}
