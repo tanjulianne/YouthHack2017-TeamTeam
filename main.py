@@ -37,24 +37,50 @@ def init():
 def createProposal():
     return send_file("templates/createproposal.html")
 
+@app.route('/proposal')
+def proposal():
+    return send_file("templates/proposal.html")
+
 
 @app.route('/search', methods=['GET', 'POST'])
 def parseSearch():
     data = json.loads(request.data.decode())
-    search = data["search"]
-    print("Searching for: " + search)
-    return search
+    if data["search"]:
+        search = data["search"]
+    else:
+        search = "*"
+    list = db.session.query(Post)
+    jsonlist = {'result':[]}
+    for post in list:
+        searchText = str(post.title + " " + post.description + " " + post.tag).lower()
+
+        item = {}
+        item['title'] = post.title
+        item['description'] = post.description
+        item['upvote'] = post.upvotes
+        item['downvote'] = post.downvotes
+        item['tags'] = post.tag
+
+        if search in searchText:
+            jsonlist['result'].append(item)
+        elif search is "*":
+            jsonlist['result'].append(item)
+
+    print(jsonlist)
+    response = app.response_class(
+        response=json.dumps(jsonlist),
+        status=200,
+        mimetype='application/json'
+    )
+    return response
 
 
 @app.route('/submitProposal', methods=['GET', 'POST'])
 def submitProposal():
     data = json.loads(request.data.decode())
-    proposalTitle = data["title"]
-    proposalDetails = data["details"]
-    proposalTags = data["tags"]
-    print(proposalTitle)
-    print(proposalDetails)
-    print(proposalTags)
+    newData = Post(title=data["title"], description=data["details"], upvotes=0, downvotes=124, tag=data["tags"]);
+    db.session.add(newData)
+    db.session.commit()
     return "success"
 
 if __name__ == '__main__':

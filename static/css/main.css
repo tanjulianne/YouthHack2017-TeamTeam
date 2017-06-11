@@ -1,7 +1,21 @@
+#logo {
+    width: 64px;
+    height: 64px;
+}
 
 body {
     background-color: #242729;
     color: #99d4ff;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1 {
+    font-size: 65px;
+}
+
+.login {
+    border: 1px solid #AAA;
+    background-color: #AAA;
 }
 
 .navbar {
