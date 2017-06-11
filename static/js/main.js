@@ -38,7 +38,10 @@ var testData = [
     }
 ];
 
-
+$("#login-home").click(function() {
+    $("#hideme").hide();
+    $("#showme").show();
+})
 
 var app = angular.module('app', []);
 var loginType = 0;
@@ -53,6 +56,8 @@ $("#decline-proposal").click(function() {
     alert(1);
     basicModal.show();
 });
+ 
+
 
 $("#logout-mode").hide();
 $("#profile-section").hide();

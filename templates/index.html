@@ -41,7 +41,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
-                        <div class="site-heading">
+                        <div id="actual" class="site-heading">
                             <h1>CrowdDraft Proposals</h1>
                         </div>
                     </div>
@@ -91,7 +91,7 @@
                             </div>
                             <div class="post-content">
                                 <div class="post-title">
-                                <a href="/proposal">
+                                <a href="/proposal" style="color: #99d4ff">
                                 {{proposal.title}}</a>
                                 </div>
                                 <div class="post-description">
@@ -107,7 +107,7 @@
                                     <div class="post-comments">
                                         Comments: <span class="count">{{proposal.comments}}</span> 
                                     </div>
-                                    <div class="moderator-controls">
+                                    <div class="moderator-controls" hidden>
                                         <button id="accept-proposal" type="button" class="btn btn-success">Approve Proposal</button>
                                         <button id="decline-proposal" ype="button" class="btn btn-danger">Disapprove Proposal</button>
                                     </div>

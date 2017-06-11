@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>CrowdDraft</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+        <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../static/css/main.css" rel="stylesheet">
+
+        <style>
+        </style>
+    </head>
+
+    <body ng-app="app">
+        <!-- Navigation -->
+        
+        <nav class="navbar fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="/" style="padding:0px;"><span>
+                <img id="logo" src="../static/img/logo.png">    </span>CrowdDraft</a>
+                <div class="navbar-content">
+                    <div id="login-mode">
+                        Username: <input id="username" class="nav-link">
+                        <button type="button" class="btn btn-default" id="login">Log In</button>
+                    </div>
+                    <div id="logout-mode">
+                        <text id="username-logout" class="nav-link" disabled></text>
+                        <a class="nav-link" id="logout" href="/">LOGOUT</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Header -->
+        
+        <div class="container" id="hideme">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+                    <div class="site-heading" style="margin-top: 50px; margin-bottom: 100px">
+                        <h1 style="font-size: 150px; letter-spacing: 15px;">CrowdDraft</h1>
+                        <div style="font-size: 25px">Proposals Submitted: 231</div>
+                    </div>
+                    <div id="login-mode" style="margin-bottom: 250px;">
+                        Username: <input id="username-home" class="nav-link">
+                        <button type="button" class="btn btn-default" id="login-home">Log In</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="showme" hidden>
+            <header>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+                            <div id="actual" class="site-heading">
+                                <h1>CrowdDraft Proposals</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Content -->
+            <div class="col-lg-2"></div>
+                <div class="col-lg-8" >
+                    <div ng-controller="ctrl">
+                        <div class="row">
+                            <div class="form-group search">
+                                <!--<button type="button" class="btn btn-default">Tags</button>-->
+                                <label for="searchProposal">Search</label>
+                                <input id="searchProposal" class="form-control" type="text" ng-model="search"  />
+                                <button type="button" class="btn btn-default" ng-click="searchProposals()">Search</button>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div ng-repeat="proposal in res">
+                                <div class="post">
+                                <hr>
+                                <div class="post-details">
+                                    <div class="post-settings"><span class="glyphicon glyphicon-cog"></span></div>
+                                    <div class="date">
+                                        Posted:
+                                        <div id="date-posted">{{proposal.posted | date}}</div>
+                                        Last Updated:
+                                        <div id="date-updated">{{proposal.updated | date}}</div>
+                                    </div>
+                                </div>
+                                <div class="post-vote-section">
+                                    <div id="vote-up" class="mouse-pointer" ng-click="voteup()">
+                                        <span>▲</span>
+                                        <div class="post-upvote-count">{{proposal.upvote}}</div>
+                                    </div>
+                                    <hr>
+                                    <div id="vote-down" class="mouse-pointer">
+                                        <div class="post-downvote-count">{{proposal.downvote}}</div>
+                                        <span class="vote-down">▼</span>
+                                    </div>
+                                </div>
+                                <div class="post-image">
+                                    <img src="../static/img/sample-bridge.png">
+                                </div>
+                                <div class="post-content">
+                                    <div class="post-title">
+                                    <a href="/proposal" style="color: #99d4ff">
+                                    {{proposal.title}}</a>
+                                    </div>
+                                    <div class="post-description">
+                                    {{proposal.description}}
+                                    </div>
+                                    <div class="post-tags">
+                                        <div class="tag-title">Tags:</div>
+                                            <!--<div ng-repeat="tag in post.tags">
+                                            </div>-->                                            
+                                        <div class="tag">{{proposal.tags}}</div>
+                                    </div>
+                                    <div class="post-controls">
+                                        <div class="post-comments">
+                                            Comments: <span class="count">{{proposal.comments}}</span> 
+                                        </div>
+                                        <div class="moderator-controls" hidden>
+                                            <button id="accept-proposal" type="button" class="btn btn-success">Approve Proposal</button>
+                                            <button id="decline-proposal" ype="button" class="btn btn-danger">Disapprove Proposal</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                        <!-- Pager -->
+
+                        <!--
+                        <div class="clearfix">
+                            <a class="btn btn-secondary float-right" href="#">Older Posts &rarr;</a>
+                        </div>
+                        -->
+                    </div>
+                    </div>
+                </div>
+            <div id="profile-section" class="profile col-lg-2" ng-controller="view">
+                <button id="write-proposal" type="button" class="btn btn-default">Write Proposal</button>
+                <div class="profile-name">
+                    <h1 id="user"></h1>
+                </div>
+                <div class="profile-stats">
+                    <span class="approved-proposal">0</span> Approved Proposals
+                    <br>
+                    <span class="needs-editing">0</span> Needs Editing
+                </div>
+            </div>
+            
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+                        <p class="copyright text-muted">Copyright &copy; CrowdDraft 2017</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="../static/js/jquery-3.2.1.min.js"></script>
+        <script src="../static/js/bootstrap.min.js"></script>
+        <script src="../static/js/main.js"></script>
+        
+    </body>
+</html>

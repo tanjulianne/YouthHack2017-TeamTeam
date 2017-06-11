@@ -32,6 +32,9 @@ class Post(db.Model):
 def init():
     return send_file("templates/index.html")
 
+@app.route('/home')
+def home():
+    return send_file("templates/home.html")
 
 @app.route('/createproposal')
 def createProposal():
