@@ -11,14 +11,17 @@
 
 input[name="proposal-title"] {
 	width: 60%;
+    color: #222;
 }
 
 textarea {
+    color: #222;
 	width: 64%;
 	height: 200px;
 }
 
 input[name="tags"] {
+    color: #222;
 	width: 64%;
 }
 
@@ -55,4 +58,3 @@ input[name="tags"] {
 
 h1, label {
 	color: #9fa6ad;
-}

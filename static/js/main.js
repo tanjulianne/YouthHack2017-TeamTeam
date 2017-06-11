@@ -38,8 +38,23 @@ var testData = [
     }
 ];
 
+
+
 var app = angular.module('app', []);
 
+$("#write-proposal").click(function() {
+    location.href = "/createproposal";
+});
+
+
+$("#decline-proposal").click(function() {
+    alert(1);
+    basicModal.show();
+});
+
+
+    
+// search for proposals
 app.controller('ctrl', function ($scope, $http) {
     $scope.searchProposals = function () {
         $scope.res = testData;
@@ -48,6 +63,25 @@ app.controller('ctrl', function ($scope, $http) {
             method: 'POST',
             url: '/search',
             data: {"search":$scope.search}
+        }).then(function successCallback(response) {
+            console.log(response.data);
+        }, function errorCallback(response) {
+            console.log(response.data);
+        });
+    }
+});
+
+app.controller('submitController', function ($scope, $http) {
+    $scope.submitProposal = function () {
+        console.log("Submit new proposal");
+        $http({
+            method: 'POST',
+            url: '/submitProposal',
+            data: {
+                "title":$scope.proposalTitle,
+                "details":$scope.proposalDetails,
+                "tags":$scope.proposalTags
+            }
         }).then(function successCallback(response) {
             console.log(response.data);
         }, function errorCallback(response) {

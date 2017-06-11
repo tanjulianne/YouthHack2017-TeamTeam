@@ -13,14 +13,10 @@
         <link href="../static/css/main.css" rel="stylesheet">
 
         <style>
-            body {
-                background-color: #242729;
-                color: #99d4ff;
-            }
         </style>
     </head>
 
-    <body>
+    <body ng-app="app">
         <!-- Navigation -->
         <nav class="navbar fixed-top">
             <div class="container">
@@ -47,7 +43,7 @@
 
         <!-- Main Content -->
         <div class="col-lg-2"></div>
-            <div class="col-lg-8" ng-app="app">
+            <div class="col-lg-8" >
                 <div ng-controller="ctrl">
                     <div class="row">
                         <div class="form-group search">
@@ -83,7 +79,7 @@
                                 </div>
                             </div>
                             <div class="post-image">
-                                <img src="img/sample-bridge.png">
+                                <img src="../static/img/sample-bridge.png">
                             </div>
                             <div class="post-content">
                                 <div class="post-title">
@@ -102,8 +98,10 @@
                                     <div class="post-comments">
                                         Comments: <span class="count">{{proposal.comments}}</span> 
                                     </div>
-                                    <button type="button" class="btn btn-success">Approve Proposal</button>
-                                    <button type="button" class="btn btn-danger">Disapprove Proposal</button>
+                                    <div class="moderator-controls">
+                                        <button id="accept-proposal" type="button" class="btn btn-success">Approve Proposal</button>
+                                        <button id="decline-proposal" ype="button" class="btn btn-danger">Disapprove Proposal</button>
+                                    </div>
                                 </div>
                             </div>
                             <hr>
@@ -116,7 +114,7 @@
                 </div>
                 </div>
             </div>
-        <div class="profile col-lg-2">
+        <div class="profile col-lg-2" ng-controller="view">
             <button id="write-proposal" type="button" class="btn btn-default">Write Proposal</button>
             <div class="profile-name">
                 <h1>Blaise Cruz</h1>
@@ -128,6 +126,23 @@
             </div>
         </div>
         
+        <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&amp;times;</button>
+                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h3>Modal Body</h3>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" >Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Footer -->
         <footer>

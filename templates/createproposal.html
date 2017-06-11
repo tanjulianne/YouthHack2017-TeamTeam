@@ -9,9 +9,9 @@
         <title>TEAM TEAM YOUTH HACK</title>
 
         <!-- Bootstrap core CSS -->
+        <link href="../static/css/bootstrap.min.css" rel="stylesheet">
         <link href="../static/css/main.css" rel="stylesheet">
         <link href="../static/css/create-proposal.css" rel="stylesheet">
-        <link href="../static/css/bootstrap.min.css" rel="stylesheet">
 
         <style>
             body {
@@ -21,7 +21,7 @@
         </style>
     </head>
 
-    <body>
+    <body ng-app="app">
         <!-- Navigation -->
         <nav class="navbar fixed-top">
             <div class="container">
@@ -54,31 +54,31 @@
             <p class="guidelines">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla posuere elementum lacinia. Vivamus lorem nulla, laoreet nec nisi quis, semper egestas orci. Cras sit amet gravida est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla posuere elementum lacinia. Vivamus lorem nulla, laoreet nec nisi quis, semper egestas orci. Cras sit amet gravida est. </p>
         </div>
 
-        <div class="container">
+        <div id="proposal" class="container" ng-controller="submitController">
             <tbody>
                 <tr>
                     <td class="title">
                         <label for="proposal-title" id="title-label">Title</label>
                     </td>
                     <td class="ask-title">
-                        <input type="text" name="proposal-title">
+                        <input type="text" name="proposal-title" ng-model="proposalTitle">
                     </td>
                 </tr>
             </tbody>
 
             <div class="description-container">
                 <form>
-                    <textarea name="proposal-description">
+                    <textarea name="proposal-description" ng-model="proposalDetails">>
                     </textarea> 
                 </form>
             </div>
 
             <div class="tag-container">
                 <label for="tags" id="tags-label">Tags</label>
-                <input type="text" name="tags">
+                <input type="text" name="tags" ng-model="proposalTags">
             </div>
 
-            <button class="button submit-proposal">Submit Proposal</button>
+            <button class="button submit-proposal" ng-click="submitProposal()">Submit Proposal</button>
         </div>
 
         <!-- Footer -->
@@ -120,7 +120,9 @@
             </div>
         </footer>
 
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
         <script src="../static/js/jquery-3.2.1.min.js"></script>
         <script src="../static/js/bootstrap.min.js"></script>
+        <script src="../static/js/main.js"></script>
     </body>
 </html>
